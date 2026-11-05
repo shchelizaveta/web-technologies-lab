@@ -17,7 +17,7 @@ test("HTML page includes valid entry points and required sections", () => {
     assert.ok(html.includes('"' + name + '"'), "Missing asset reference: " + name);
     assert.ok(existsSync(new URL("../" + name, import.meta.url)));
   }
-  assert.match(html, /Варіант: 10/);
+  assert.match(html, /Варіант 10/);
   assert.match(css, /@media\(max-width: 560px\)/);
   assert.match(css, /\.project-card\[hidden\]\s*\{\s*display:\s*none;/);
 });
