@@ -1,38 +1,114 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Лабораторні роботи Щербак Єлизавети Валеріївни з вебтехнологій">
-    <title>Лабораторна робота №1 — Основи роботи з GitHub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Особистий навчальний вебпроєкт Щербак Єлизавети: портфоліо лабораторних робіт з вебтехнологій. Варіант 10.">
+  <title>Мій навчальний вебпроєкт — Портфоліо Єлизавети</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
+  <a class="skip-link" href="#content">Перейти до вмісту</a>
+  <header class="site-header">
+    <div class="shell header-bar">
+      <a class="brand" href="#top" aria-label="На початок">ЄВ<span class="brand-dot">.</span></a>
+      <nav aria-label="Основна навігація">
+        <a href="#about">Про проєкт</a>
+        <a href="#projects">Роботи</a>
+        <a href="#workflow">GitHub</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Увімкнути темну тему" aria-pressed="false">☾ <span>Тема</span></button>
+    </div>
+  </header>
+
+  <main id="content">
+    <section id="top" class="hero shell">
+      <div>
+        <span class="eyebrow">WEB TECHNOLOGIES / ЛАБОРАТОРНА №1</span>
         <h1>Мій навчальний вебпроєкт — портфоліо</h1>
-        <p>Студентка: Щербак Єлизавета Валеріївна</p>
-        <p>Група: 6.04.186.010.23.2</p>
-        <p>Варіант: 10</p>
-        <p>Викладач: Кобзев І. В.</p>
-    </header>
+        <p class="lead">Власна навчальна вебсторінка для презентації практичних робіт, технологій та навичок роботи з Git і GitHub.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Переглянути роботи <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="https://github.com/shchelizaveta/web-technologies-lab">Репозиторій GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="identity-card" aria-label="Інформація про студентку">
+        <span class="identity-label">КАРТКА ПРОЄКТУ</span>
+        <div class="avatar" aria-hidden="true">Є</div>
+        <h2>Щербак Єлизавета Валеріївна</h2>
+        <dl>
+          <div><dt>Група</dt><dd>6.04.186.010.23.2</dd></div>
+          <div><dt>Варіант</dt><dd>10</dd></div>
+          <div><dt>Викладач</dt><dd>Кобзев І. В.</dd></div>
+          <div><dt>Рік</dt><dd>2026</dd></div>
+        </dl>
+      </aside>
+    </section>
 
-    <main>
-        <h2>Лабораторна робота №1: Основи роботи з GitHub</h2>
-        <h2>Мої технології</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git</li>
-            <li>GitHub</li>
+    <section id="about" class="section section-muted">
+      <div class="shell">
+        <div class="section-heading"><span class="eyebrow">01 / ПРО ПРОЄКТ</span><h2>Мої технології</h2>
+          <p>HTML створює структуру сторінки, CSS відповідає за оформлення, JavaScript додає взаємодію, а Git і GitHub зберігають історію версій.</p>
+        </div>
+        <ul class="tech-list">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>GitHub</li>
         </ul>
-        <h2>Мої лабораторні роботи</h2>
-        <p>Репозиторій призначений для зберігання навчальних матеріалів та виконаних лабораторних робіт з вебтехнологій.</p>
-        <p>Поточна робота присвячена створенню репозиторію, комітам, гілкам та Pull Request у GitHub.</p>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-        <p>© 2026 Щербак Єлизавета Валеріївна · Група 6.04.186.010.23.2 · Варіант 20</p>
-    </footer>
+    <section id="projects" class="section shell">
+      <div class="section-heading"><span class="eyebrow">02 / НАВЧАЛЬНІ РОБОТИ</span><h2>Мої лабораторні роботи</h2>
+        <p>Виконані завдання та матеріали, які можна відкрити безпосередньо в репозиторії.</p>
+      </div>
+      <div class="filter-bar" role="group" aria-label="Фільтр робіт">
+        <button class="filter active" type="button" data-filter="all" aria-pressed="true">Усі</button>
+        <button class="filter" type="button" data-filter="web" aria-pressed="false">Вебпроєкт</button>
+        <button class="filter" type="button" data-filter="data" aria-pressed="false">Дані</button>
+      </div>
+      <div class="project-grid" id="project-grid">
+        <article class="project-card" data-category="web">
+          <span class="project-index">01 / WEB</span>
+          <h3>Основи роботи з GitHub</h3>
+          <p>Створення репозиторію, HTML-сторінки, CSS-стилів, окремих гілок, комітів і Pull Request.</p>
+          <a href="LAB1_REPORT.md">Звіт лабораторної <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card" data-category="web">
+          <span class="project-index">02 / FRONTEND</span>
+          <h3>Особисте портфоліо</h3>
+          <p>Адаптивна сторінка з перемиканням теми та фільтрацією карток робіт за категоріями.</p>
+          <a href="https://github.com/shchelizaveta/web-technologies-lab/blob/main/index.html">Код HTML <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card" data-category="data">
+          <span class="project-index">03 / DATA</span>
+          <h3>Набір даних sales.csv</h3>
+          <p>Таблиця продажів із 500 записами для використання в наступних лабораторних роботах.</p>
+          <a href="sales.csv">Відкрити CSV <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <p id="filter-count" class="filter-count" aria-live="polite">Показано робіт: 3</p>
+    </section>
+
+    <section id="workflow" class="section section-muted">
+      <div class="shell workflow">
+        <div class="section-heading"><span class="eyebrow">03 / КОНТРОЛЬ ВЕРСІЙ</span><h2>Як розвивається проєкт</h2>
+          <p>Варіант 10: власний вебпроєкт та організація версій через GitHub.</p>
+        </div>
+        <ol class="steps">
+          <li><strong>Створення</strong><span>Файли зберігаються в репозиторії.</span></li>
+          <li><strong>Розробка</strong><span>Зміни вносяться в окремій гілці.</span></li>
+          <li><strong>Коміти</strong><span>Кожен етап має своє повідомлення.</span></li>
+          <li><strong>Pull Request</strong><span>Перевірені зміни об'єднуються з main.</span></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© 2026 Щербак Єлизавета Валеріївна · Лабораторна робота №1 · Варіант 10</p>
+      <a href="https://github.com/shchelizaveta/web-technologies-lab">GitHub ↗</a>
+    </div>
+  </footer>
 </body>
 </html>
